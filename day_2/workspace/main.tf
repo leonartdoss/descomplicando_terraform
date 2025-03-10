@@ -21,6 +21,7 @@ resource "aws_instance" "web" {
   tags = {
     Name       = "HelloWorld"
     Env        = "develop"
+    Workspace  = terraform.workspace
     Plataforma = data.aws_ami.ubuntu.platform_details
   }
 }
