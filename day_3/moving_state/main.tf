@@ -3,15 +3,7 @@ module "project_a" {
   instance_name = "marseille"
 }
 
-resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-
-  tags = {
-    Name       = var.instance_name
-    Env        = var.environment
-    Plataforma = data.aws_ami.ubuntu.platform_details
-  }
+moved {
+  from = module.project_a.aws_instance.web
+  to = module.project_a.aws_instance.changed_name_web
 }
-
-
