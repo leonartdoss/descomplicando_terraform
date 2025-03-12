@@ -1,3 +1,3 @@
 output "instance_ip_addr" {
-    value = aws_instance.web.private_ip
+    value = module.project_a.instance_ip_addr
 }
