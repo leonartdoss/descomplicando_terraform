@@ -1,7 +1,9 @@
+import {
+  to = aws_instance.web
+  id = "i-0ae7351f9340b43b3"
+}
+
 resource "aws_instance" "web" {
-  ami           = "ami-08b5b3a93ed654d19"
+  ami           = "ami-0f9de6e2d2f067fca"
   instance_type = "t2.micro"
-  tags = {
-    "Name": "manual-instance"
-  }
 }
